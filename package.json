@@ -1,0 +1,21 @@
+{
+  "name": "book-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": { "node" : "8.12.0"},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ali0003433/book-app.git"
+  },
+  "author": "Alyssa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ali0003433/book-app/issues"
+  },
+  "homepage": "https://github.com/ali0003433/book-app#readme"
+}
