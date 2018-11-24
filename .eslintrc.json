@@ -26,10 +26,10 @@
       "no-trailing-spaces": "warn",
       "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
       "no-multi-spaces": ["warn", {"exceptions": {"VariableDeclarator": true}}],
-      "no-template-curly-in-string": "error",
+      "no-template-curly-in-string": "off",
       "eqeqeq": ["error", "always"],
       "semi": ["error", "always"],
-      "indent": ["error", 2],
+      "indent": ["error", 4],
       "no-redeclare": ["error", {"builtinGlobals": true}]
     }
   }
