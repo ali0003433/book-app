@@ -20,3 +20,16 @@ app.get('/', (req,res) => {
 app.get('*', (req,res) => {
     res.send('I\'m sorry. You woke the sleeping error.');
 });
+
+// app.get('/', function(req,res){
+//     const books = [
+//         { title: 'The Dark Net', author: 'Jamie Bartlett'},
+//         { title: 'The Rules Do Not Apply', author: 'Ariel Levy' }
+//     ];
+//     const message = 'Here are some books Alyssa has read recently.';
+
+//     res.render('pages/index',{
+//         books: books,
+//         message: message
+//     });
+// });
