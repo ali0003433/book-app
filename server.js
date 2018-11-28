@@ -21,15 +21,8 @@ app.get('*', (req,res) => {
     res.send('I\'m sorry. You woke the sleeping error.');
 });
 
-// app.get('/', function(req,res){
-//     const books = [
-//         { title: 'The Dark Net', author: 'Jamie Bartlett'},
-//         { title: 'The Rules Do Not Apply', author: 'Ariel Levy' }
-//     ];
-//     const message = 'Here are some books Alyssa has read recently.';
-
-//     res.render('pages/index',{
-//         books: books,
-//         message: message
-//     });
-// });
+app.post('/search', (req, res) => {
+    const data = req.body;
+    let url = 'https://www.googleapis.come/books/v1/volumes?q=+';
+    req.body.param === 'title' ? url +=`intitle:${data.searchText}` : url += `inauthor:${data.searchText}`;
+});
