@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <title>book-app</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="/public/main.css" />
+    <% include ../partials/head %>
 </head>
 <body>
+    <% include ../partials/header %>
+
+    <form id="search-form" action="/search" method="POST">
+    <fieldset>
+        <input name='searchText'/>
+    </fieldset>
+    <fieldset>
+        <label for="author">Author</label>
+        <input type="radio" id="author" name="param" value="author" />
+    </fieldset>
+    <button type="submit">Submit</button>
+    </form>
+    <% include ../partials/footer %>
     
 </body>
 </html>
