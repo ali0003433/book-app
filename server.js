@@ -22,14 +22,14 @@ app.get('/', (req,res) => {
 
 app.post('/search', (req, res) => {
     const data = req.body;
-    let url = 'https://www.googleapis.come/books/v1/volumes?q=+&key=google_books_api_key';
-    req.body.param === 'title' ? url +=`intitle:${data.searchText}` : url += `inauthor:${data.searchText}`;
+    let url = 'https://www.googleapis.com/books/v1/volumes?q=+';
+    req.body.param === 'title' ? url +=`intitle:${data.searchText}` : url += `inauthor:${data.searchText}`+data.searchText;
     superagent.get(url)
         .then(book => {
             let booksArr = book.body.items.map(val => {
                 return new Book(val);
             });
-            res.render('pages/searchResults', { books: booksArr});
+            res.render('pages/results', { books: booksArr});
         })
         .catch((error => {
             res.status(400).send(error);
