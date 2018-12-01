@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <%= include ../partials/head %>
+    <% include ../partials/head %>
 </head>
 <body>
-    <%= include ../partials/header %>
+    <% include ../partials/header %>
     <h2>Book Search Results</h2>
     <ul>
         <% books.map(book => { %>
-            <li>><%= book.title %> - <%= book.author %></li>
-       <% }) &>
+            <li><%= book.title %> - <%= book.author %></li>
+       <% }) %>
     </ul>
-    <%= include ../partials/footer.ejs %>
+    <% include ../partials/footer %>
 </body>
 </html>
