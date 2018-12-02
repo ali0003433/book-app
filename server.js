@@ -21,19 +21,18 @@ app.post('/search', (req, res) => {
     console.log(req.body);
     let url = 'https://www.googleapis.com/books/v1/volumes?q=+';
     req.body.param === 'title' ? url +=`intitle:${data.searchText}` : url += `inauthor:${data.searchText}`;
-    console.log(url)
+    console.log(url);
     superagent.get(url)
         .then(book => {
             let booksArr = book.body.items.map(val => {
                 return new Book(val);
             });
-            console.log(booksArr)
+            console.log(booksArr);
             res.render('pages/results', { books: booksArr});
-            
         })
-        .catch((error => {
-            res.status(400).send('hello error');
-        }));
+        .catch(err => {
+            res.status(400).send('hello error',err);
+        });
 });
 
 app.get('*', (req,res) => {
