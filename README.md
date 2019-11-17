@@ -5,7 +5,7 @@ https://al-booklist.herokuapp.com/
 #### -- Project Status: Completed
 
 ## Project Intro
-A simple book finder application using Google Books API. 
+A no-frills book finder application using Google Books API. 
 
 ### Technologies/Libraries
 
